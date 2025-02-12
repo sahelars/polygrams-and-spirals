@@ -20,10 +20,10 @@ This ratio is a critical metric in characterizing the polygon's geometry, with n
 ## Visual results
 
 ![Polygrams diagram](generate/renders/regular_star_polygons.png)
-<sub>**Figure 1:** Regular star polygon series constructed using a fixed step of 2. _V_ denotes the number of vertices, _A_ denotes the angle, and _R_ denotes the ratio.</sub>
+<sub>**Figure 1:** Regular star polygon series constructed using a fixed step of 2</sub>
 
 ![Spirals diagram](generate/renders/logarithmic_spirals.png)
-<sub>**Figure 2:** Logarithmic spiral series generated from regular star polygon ratios. _V_ denotes the number of vertices, _A_ denotes the angle, and _R_ denotes the ratio.</sub>
+<sub>**Figure 2:** Logarithmic spiral series generated from regular star polygon ratios</sub>
 
 ### Spiral Construction
 
