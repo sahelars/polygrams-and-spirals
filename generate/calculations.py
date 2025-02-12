@@ -33,7 +33,7 @@ def plot_star_polygon(n, step, ax):
 
     ax.set_aspect("equal")
     ax.axis("off")
-    ax.set_title(f"\nV: {n}  A: {deg:.2f}°  R: {ratio:.4f}\n")
+    ax.set_title(f"\n{{{n}/2}}   {deg:.2f}°   {ratio:.4f}:1\n")
 
 
 def plot_logarithmic_spiral(n, step, ax):
@@ -92,7 +92,7 @@ def plot_logarithmic_spiral(n, step, ax):
 
     ax.set_aspect("equal")
     ax.axis("equal")
-    ax.set_title(f"V: {n}  A: {deg:.2f}°  R: {ratio:.4f}")
+    ax.set_title(f"{{{n}/2}}   {deg:.2f}°   {ratio:.4f}:1")
 
 
 def generate_star_points(n, step, radius=1):
