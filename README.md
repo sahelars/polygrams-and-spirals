@@ -17,7 +17,7 @@ This ratio is a critical metric in characterizing the polygon's geometry, with n
 - **Logarithmic Spiral Generation:** For each star polygon configuration, a corresponding logarithmic spiral is constructed using the calculated ratio and the angle between vertices (180°-360°/n). The spiral's growth factor is determined by this ratio, with each successive arc segment (spanning the angle between vertices) scaled accordingly, resulting in either an expanding or contracting spiral based on whether the ratio is greater or less than unity.
 - **Visualization:** The package leverages `matplotlib` to generate visual representations of both the regular star polygons and the corresponding logarithmic spirals. This visualization assists in verifying the computed geometric proportions and further substantiates the analytical framework.
 
-## Visual Results
+## Visual results
 
 ![Polygrams diagram](generate/renders/regular_star_polygons.png)
 <sub>**Figure 1:** Regular star polygon series constructed using a fixed step of 2. _V_ denotes the number of vertices, _A_ denotes the angle, and _R_ denotes the ratio.</sub>
