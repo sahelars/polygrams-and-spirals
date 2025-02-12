@@ -67,19 +67,29 @@ pip3 install .
 
 ## Usage
 
-To generate plots of star polygons:
+To generate N plots of regular star polygons:
 
 ```bash
 python3 -m generate --polygrams [n]
 ```
 
-To generate logarithmic spirals:
+To generate N plots of logarithmic spirals:
 
 ```bash
 python3 -m generate --spirals [n]
 ```
 
-Optional parameter [n] (defaulting to 30) determines the number of configurations
+To generate a regular star polygon with N vertices:
+
+```bash
+python3 -m generate --polygram [n]
+```
+
+To generate a logarithmic spiral from a regular star polygon with N vertices:
+
+```bash
+python3 -m generate --spiral [n]
+```
 
 ## License
 
