@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=69.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "polygrams_and_spirals"
+authors = [
+    { name = "Sam Larsen", email = "sam@slarsen.io" }
+]
+description = "Geometric analysis of line segment ratios and vertex angles in regular star polygons and the corresponding logarithmic spirals"
+requires-python = ">=3.6"
+license = "MIT"
+version = "1.0.0"
+readme = "README.md"
+dependencies = [
+    "matplotlib",
+    "numpy",
+]
+
+[project.urls]
+Homepage = "https://github.com/sahelars/polygrams-and-spirals"
