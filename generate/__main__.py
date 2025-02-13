@@ -4,14 +4,14 @@ from .calculations import plot_star_polygon, plot_logarithmic_spiral
 from time import time
 
 parser = argparse.ArgumentParser(
-    description="Generate regular star polygons and corresponding logarithmic spirals"
+    description="Generate two-step star polygons and corresponding logarithmic spirals"
 )
 group = parser.add_mutually_exclusive_group(required=True)
 group.add_argument(
     "--polygrams",
     type=int,
     metavar="N",
-    help="plot multiple regular star polygons with N configurations",
+    help="plot multiple two-step star polygons with N configurations",
 )
 group.add_argument(
     "--spirals",
@@ -76,8 +76,8 @@ if polygrams or spirals:
             parser.exit(1)
 
     if polygrams:
-        name = "Regular Star Polygrams"
-        file = "regular_star_polygons.png"
+        name = "Two-Step Star Polygrams"
+        file = "star_polygons.png"
     elif spirals:
         name = "Logarithmic Spirals"
         file = "logarithmic_spirals.png"
@@ -97,8 +97,8 @@ if polygrams or spirals:
 elif polygram or spiral:
     if polygram:
         plot_star_polygon(polygram, 2, plt.gca())
-        name = "Regular Star Polygon"
-        file = "regular_star_polygon.png"
+        name = "Two-Step Star Polygon"
+        file = "star_polygon.png"
     elif spiral:
         plot_logarithmic_spiral(spiral, 2, plt.gca())
         name = "Logarithmic Spiral"

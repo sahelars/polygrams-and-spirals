@@ -5,7 +5,7 @@ from math import sin, cos, hypot, pi
 
 def plot_star_polygon(n, step, ax):
     """
-    Plot a regular star polygon on the given axes.
+    Plot a star polygon on the given axes.
     """
 
     ratio = retrieve_ratio(n, step)
@@ -41,6 +41,7 @@ def plot_logarithmic_spiral(n, step, ax):
     Plot a logarithmic spiral on the given axes.
     The spiral will go outward when the ratio > 1 and inward when ratio < 1.
     """
+
     ratio = retrieve_ratio(n, step)
     deg = 180 - (360 / n)
     theta_arc = np.radians(deg)
@@ -92,12 +93,12 @@ def plot_logarithmic_spiral(n, step, ax):
 
     ax.set_aspect("equal")
     ax.axis("equal")
-    ax.set_title(f"{{{n}/2}}   {deg:.2f}°   {ratio:.4f}:1")
+    ax.set_title(f"\n{{{n}/2}}   {deg:.2f}°   {ratio:.4f}:1\n")
 
 
 def generate_star_points(n, step, radius=1):
     """
-    Generate points for a regular star polygon with n vertices and step size.
+    Generate points for a star polygon with n vertices and step size.
     """
 
     points = []
@@ -183,10 +184,16 @@ def line_intersection(p1, p2, p3, p4):
 
 
 def rotate_points(points, angle):
-    """Rotate points around origin by given angle in radians."""
+    """
+    Rotate points around origin by given angle in radians.
+    For odd-sided polygons, adds additional rotation to get 2 points up.
+    """
+
+    n = len(points)
+    if n % 2 == 1:
+        angle += pi / n
 
     rotated = []
-
     for x, y in points:
         new_x = x * cos(angle) - y * sin(angle)
         new_y = x * sin(angle) + y * cos(angle)
